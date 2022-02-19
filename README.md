@@ -191,3 +191,49 @@ div {
   padding: 6px;
 }
 ```
+---
+
+## 재활용
+- 다시 사용할 코드를(@mixin 이름)을 통해 설정
+- (@include 이름) 을 통해 사용
+
+- SCSS
+```scss
+@mixin box($size:80px, $color : tomato) { // @mixin을 통해 변수 설정 및 기본 값 설정 가능
+    width : $size;
+    height : $size;
+    background-color : $color;
+}
+.container {
+    @include box(200px, blue);  // @include를 통해 설정 된 변수의 값들 사용(기본 값 재할당 가능)
+    .item {
+        @include box($color : green);
+        // 키워드 인수
+        // 재할당 시 순서대로 입력해야 하나 키워드를 통해 원하는 값만 재할당 가능
+    }
+}
+
+.box {
+    @include box;
+}
+```
+
+- CSS
+```CSS
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+.container .item {
+  width: 80px;
+  height: 80px;
+  background-color: green;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: tomato;
+}
+```
