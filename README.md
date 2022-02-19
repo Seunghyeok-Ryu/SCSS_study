@@ -54,3 +54,27 @@
   color: orange;
 }
 ```
+## 상위(부모) 선택자 참조
+- & 기호 사용
+  - 자신이 포함된 그 영역의 상위 선택자를 참조
+  - 상위 선택자가 하위 선택자의 &기호로 치환
+- SCSS
+```scss
+.fs {
+    &-small { font-size : 12px; }
+    &-medium { font-size : 14px; }
+    &-large { font-size : 16px; }
+}
+```
+- CSS
+```css
+.fs-small {
+  font-size: 12px;
+}
+.fs-medium {
+  font-size: 14px;
+}
+.fs-large {
+  font-size: 16px;
+}
+```
