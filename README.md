@@ -158,3 +158,36 @@
   transform: translateX(100px);
 }
 ```
+---
+
+## 산술 연산자
+- SCSS
+```scss
+div {
+    $size : 30px ;
+    width : 20px + 20px;
+    height : 40px - 10px;
+    font-size : 10px * 2;
+    margin : 30px / 2;  // 단축 속성을 지칭하는 / 기호로 나누기 연산이 되지 않음
+    // 1.괄호를 이용한 방법
+    margin : (30px / 2);
+    // 2. 변수를 이용한 방법
+    margin : $size / 2;
+    // 3. 다른 산술연산자를 같이 쓰는 방법
+    margin : 10px + 10 / 2;
+    padding : 20px % 7;
+}
+```
+
+- CSS
+``` CSS
+div {
+  width: 40px;
+  height: 30px;
+  font-size: 20px;
+  margin: 15px;
+  margin: 15px;
+  margin: 15px;
+  padding: 6px;
+}
+```
