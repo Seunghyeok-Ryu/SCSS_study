@@ -85,8 +85,7 @@
 - 선택자 처럼 사용하나 : 기호를 붙여줘야함
 - 중괄호{}가 끝나는 부분에 ; 기호를 붙여줘야 함
 - 네임스페이스 : (font-weight/size/family..., margin top/left/bottom..) 속성 부분의 이름이 동일한 것.
-<br>
-<br>
+
 - SCSS
 ```scss
 .box {
