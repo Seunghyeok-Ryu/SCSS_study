@@ -296,4 +296,14 @@ div {
   align-items: center;
 }
 ```
+---
 
+## 색상 내장 함수
+- mix($color , $color) : 두개의 색을 섞어서 출력
+-  lighten($color , 수치(%)) : %만큼 밝게
+- darken($color , 수치(%)) : %만큼 어둡게
+- saturate($color, 수치(%)) : %만큼 색 진하게
+- desaturate($color, 수치(%)) : %만큼 색 연하게
+- grayscale($color) : 주어진 색상을 회색으로 바꿔줌
+- invert($color) : 색상을 반전 시킴
+- rgba($color , 투명도 수치(.5)) : 50% 만큼 투명해짐
