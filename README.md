@@ -307,3 +307,19 @@ div {
 - grayscale($color) : 주어진 색상을 회색으로 바꿔줌
 - invert($color) : 색상을 반전 시킴
 - rgba($color , 투명도 수치(.5)) : 50% 만큼 투명해짐
+
+---
+
+## 가져오기
+- @import 함수 이용
+
+- 기존 CSS import 함수
+```css
+@import url("./경로.css");
+```
+
+- SCSS에서의 import 함수
+```scss
+@import "./경로" , "./경로";
+// url 함수, 괄호() 및 .scss 생략 가능
+```
