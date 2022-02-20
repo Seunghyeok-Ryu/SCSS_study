@@ -262,3 +262,38 @@ div {
   width: 300px;
 }
 ```
+---
+
+## 함수(function)
+- @function 함수명 ()<br> {
+  @return }을 통해 사용
+- SCSS
+```scss
+@mixin center {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+@function ratio($size, $ratio) {
+    @return $size * $ratio
+}
+
+.box {
+    $width : 100px;
+    width : $width;
+    height : ratio($width, 1/2);
+    @include center;
+}
+```
+- CSS
+```css
+.box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
