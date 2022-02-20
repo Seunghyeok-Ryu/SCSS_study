@@ -323,3 +323,38 @@ div {
 @import "./경로" , "./경로";
 // url 함수, 괄호() 및 .scss 생략 가능
 ```
+---
+
+## 재활용
+- SCSS
+```scss
+@mixin size {
+    width : 100px;
+    height : 100px;
+    @content;
+}
+.container {
+    @include size;
+    background-color : orange;
+}
+.box {
+    @include size{
+        margin : auto;    // include 내부의 {}안의 내용이 @content로 추가 적용하게 됨
+    }
+}
+```
+
+- CSS
+```css
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+```
