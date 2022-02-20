@@ -236,3 +236,29 @@ div {
   background-color: tomato;
 }
 ```
+---
+
+## 반복문
+- @for을 이용
+- SCSS
+```scss
+@for $i from 1 through 3 {
+    .box:nth-child(#{$i}) {   // #{$i} 를 통해 구현
+        width : 100px * $i;
+    }
+}
+```
+- CSS
+```css
+.box:nth-child(1) {
+  width: 100px;
+}
+
+.box:nth-child(2) {
+  width: 200px;
+}
+
+.box:nth-child(3) {
+  width: 300px;
+}
+```
